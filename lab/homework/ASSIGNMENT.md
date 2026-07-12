@@ -8,7 +8,7 @@
 
 ## 할 일
 
-### 1. 스캔한다
+### 1. 스캔
 ```bash
 cd lab
 ./scan.sh tfsec   homework/vulnerable
@@ -16,7 +16,7 @@ cd lab
 ```
 - 취약 버전은 tfsec 기준 **CRITICAL 4 · HIGH 10** 정도가 뜹니다. (환경에 따라 조금 다를 수 있음)
 
-### 2. 고친다
+### 2. 조치
 `homework/vulnerable/main.tf` 를 복사해 직접 수정하세요. 목표는 하나입니다.
 > **CRITICAL 과 HIGH 를 전부 0으로.**
 
@@ -26,7 +26,7 @@ cd lab
 - 하드코딩 비밀번호 → 변수로
 - 미암호화(RDS·EBS) → 암호화 켜기
 
-### 3. 재스캔해서 확인한다
+### 3. 재스캔
 ```bash
 ./scan.sh tfsec homework/<내가_고친_폴더>
 ```
