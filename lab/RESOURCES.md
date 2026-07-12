@@ -34,4 +34,4 @@
 
 ## 한 걸음 더
 - 내 GitHub 저장소에 **checkov를 GitHub Action으로** 붙여보기 (슬라이드 26 예시 참고).
-- 관심 있는 오픈소스 IaC 저장소를 clone해서 `./scan.sh` 돌려보기 (과제 보너스).
+- GitHub·GitLab 등 공개 IaC 저장소를 clone해서 `./scan.sh` 돌려보기, 취약한 인프라를 직접 구현해 스캔, 또는 스캐너 룰(정책)을 직접 작성 (과제 보너스).

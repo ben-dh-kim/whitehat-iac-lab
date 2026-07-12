@@ -32,7 +32,7 @@
 - **시크릿 매니저**: 비밀번호·키를 중앙에서 발급·관리하는 서비스 (AWS Secrets Manager, Vault).
 - **NHI (비인간 신원)**: 사람이 아닌 키·토큰·서비스 계정. 요즘 클라우드 보안의 큰 주제.
 - **최소 권한 (least privilege)**: 필요한 만큼만 권한을 주는 원칙.
-- **privileged / runAsNonRoot / hostPath / capabilities**: K8s 컨테이너 권한 설정들. 과하면 컨테이너 탈출로 노드까지 뚫린다.
+- **privileged / runAsNonRoot / hostPath / capabilities**: K8s 컨테이너 권한 설정들. 과하면 컨테이너 탈출로 노드까지 해킹당한다.
 - **resource limits**: 파드가 쓸 수 있는 CPU·메모리 상한. 없으면 한 파드가 노드 자원을 독점한다.
 
 ## 파이프라인
