@@ -144,7 +144,11 @@ docker run --rm -v "그_폴더:/src" aquasec/tfsec /src
 ## 실습 6: 커밋 전에 자동으로 차단하기 (15분)
 
 ```bash
+# pre-commit 설치
 python3 -m pip install pre-commit
+#   ↳ 'externally-managed-environment'(PEP 668) 오류가 나면 아래 중 하나로 설치합니다.
+#      macOS(Homebrew): brew install pipx && pipx install pre-commit
+#      그 외:           python3 -m pip install --user --break-system-packages pre-commit
 python3 -m pre_commit install     # 'pre-commit: command not found' 가 뜨면 이렇게 실행
 
 # 취약한 파일을 커밋해 차단되는 것을 확인
