@@ -1,0 +1,23 @@
+# ============================================================
+#  CI에서 IaC 스캔 — Pull Request 를 열 때마다 자동으로 검사합니다.
+#  통과하지 못하면 머지를 막을 수 있습니다. (shift-left의 완성)
+# ============================================================
+name: IaC Security Scan
+
+on:
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 코드 체크아웃
+        uses: actions/checkout@v4
+
+      - name: Checkov 스캔
+        uses: bridgecrewio/checkov-action@v12
+        with:
+          directory: lab/
+          soft_fail: false        # false = 문제 발견 시 CI 실패(머지 차단)
+          framework: all          # terraform, kubernetes, dockerfile ...
